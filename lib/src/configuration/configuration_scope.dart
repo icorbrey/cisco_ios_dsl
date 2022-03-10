@@ -5,6 +5,7 @@ import 'package:cisco_ios_dsl/src/configuration/configuration_services.dart';
 import 'package:cisco_ios_dsl/src/device.dart';
 import 'package:cisco_ios_dsl/src/interface/interface_scope.dart';
 import 'package:cisco_ios_dsl/src/interface/subinterface_scope.dart';
+import 'package:cisco_ios_dsl/src/line/line_scope.dart';
 import 'package:cisco_ios_dsl/src/util/scope.dart';
 
 class ConfigurationScope {
@@ -29,6 +30,12 @@ class ConfigurationScope {
 
   void subinterface(String subinterface, void Function(SubinterfaceScope x) body) => device
     ..useScope(Scope.subinterface(), 'interface $subinterface', body);
+
+  void line(String line, void Function(LineScope x) body) => device
+    ..useScope(Scope.line(), 'line $line', body);
+    
+  void lines(String line, void Function(LineScope x) body) => device
+    ..useScope(Scope.line(), 'line $line', body);
 
   void resetInterface(String interface) => device
     ..run('crypto key generate rsa');
