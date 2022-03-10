@@ -10,5 +10,5 @@ class InterfaceSwitchportAccess {
     ..run('switchport mode access');
   
   void setVlans(List<int> vlans) => device
-    ..run('switchport access vlan ${vlans.join(' ')}');
+    ..run('switchport access vlan ${vlans.join(',')}');
 }
