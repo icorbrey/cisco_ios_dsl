@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  publish:
+  publish-to-registry:
     runs-on: ubuntu-latest
     steps:
 

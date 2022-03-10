@@ -1,16 +1,19 @@
 name: Complete a publish dry-run
-on: workflow_dispatch
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
 
 jobs:
 
-  publish:
+  publish-dry-run:
     runs-on: ubuntu-latest
     steps:
 
       - name: Checkout
         uses: actions/checkout@v1
         
-      - name: Publish to pub.dev
+      - name: Complete a publish dry-run
         uses: icorbrey/publish-dart-package@v1
         with:
           credentials: ${{ secrets.CREDENTIAL_JSON }}
