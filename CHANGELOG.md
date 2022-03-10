@@ -3,6 +3,7 @@
 ### Bugfixes
 
 - Fixed stringification issue with lists of VLANs in switchport configuration
+- Fixed IPv4 and IPv6 not being exported from package
 
 ## 1.0.0
 
