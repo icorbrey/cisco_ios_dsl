@@ -1,3 +1,5 @@
+import 'package:cisco_ios_dsl/src/configuration/configuration_ip.dart';
+import 'package:cisco_ios_dsl/src/configuration/configuration_ipv6.dart';
 import 'package:cisco_ios_dsl/src/device.dart';
 
 class ConfigurationScope {
@@ -5,7 +7,12 @@ class ConfigurationScope {
   final Device device;
 
   ConfigurationScope(Device _device)
-    : device = _device;
+    : device = _device,
+      ip = ConfigurationIp(_device),
+      ipv6 = ConfigurationIpv6(_device);
+
+  final ConfigurationIp ip;
+  final ConfigurationIpv6 ipv6;
 
   void resetInterface(String interface) => device
     ..run('crypto key generate rsa');
