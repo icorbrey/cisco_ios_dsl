@@ -3,6 +3,9 @@ description: A starting point for Dart libraries or applications.
 version: 0.0.1
 homepage: https://github.com/icorbrey/cisco_ios_dsl
 
+dependencies:
+  intl: ^0.17.0
+
 environment:
   sdk: '>=2.16.1 <3.0.0'
 
