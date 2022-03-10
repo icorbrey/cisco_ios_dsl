@@ -1,6 +1,6 @@
 name: cisco_ios_dsl
-description: A starting point for Dart libraries or applications.
-version: 0.0.1
+description: A DSL for constructing Cisco IOS device configurations.
+version: 1.0.0
 homepage: https://github.com/icorbrey/cisco_ios_dsl
 
 dependencies:
