@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         
-      - name: Publish to pub.dev
+      - name: Complete a publish dry-run
         uses: icorbrey/publish-dart-package@v1
         with:
           credentials: ${{ secrets.CREDENTIAL_JSON }}
