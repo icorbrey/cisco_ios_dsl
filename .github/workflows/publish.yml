@@ -16,5 +16,5 @@ jobs:
       - name: Publish to pub.dev
         uses: icorbrey/publish-dart-package@v1
         with:
-          credential: ${{ secrets.CREDENTIAL_JSON }}
+          credentials: ${{ secrets.CREDENTIAL_JSON }}
           publish_method: dry-run
