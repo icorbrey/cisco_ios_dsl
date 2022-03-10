@@ -1,8 +1,5 @@
-name: Publish to pub.dev
-
-on:
-  release:
-    types: [published]
+name: Complete a publish dry-run
+on: workflow_dispatch
 
 jobs:
 
@@ -17,4 +14,4 @@ jobs:
         uses: icorbrey/publish-dart-package@v1
         with:
           credentials: ${{ secrets.CREDENTIAL_JSON }}
-          publish_method: standard
+          publish_method: dry-run
