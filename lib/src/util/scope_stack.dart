@@ -1,9 +1,11 @@
 import 'package:cisco_ios_dsl/src/util/scope.dart';
 
 class ScopeStack {
+
   final List<Scope> _stack;
 
-  ScopeStack() : _stack = [Scope.root()];
+  ScopeStack() 
+    : _stack = [Scope.root()];
 
   Scope get current => _stack.last;
 
