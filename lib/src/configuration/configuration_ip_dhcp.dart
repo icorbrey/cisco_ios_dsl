@@ -4,7 +4,6 @@ import 'package:cisco_ios_dsl/src/util/ipv4.dart';
 class ConfigurationIpDhcp {
 
   final Device device;
-
   ConfigurationIpDhcp(this.device);
 
   void excludeAddresses(IPv4 start, IPv4 end) => device
