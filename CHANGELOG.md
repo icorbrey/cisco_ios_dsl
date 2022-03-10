@@ -1,3 +1,9 @@
+## 1.0.1
+
+### Bugfixes
+
+- Fixed stringification issue with lists of VLANs in switchport configuration
+
 ## 1.0.0
 
 ### Priviledged scope:
