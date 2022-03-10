@@ -1,10 +1,11 @@
 import "dart:mirrors";
 
 class Activator {
-  static createInstance(Type type,
-      {Symbol constructor = const Symbol(""),
-      List arguments = const [],
-      Map<Symbol, dynamic> namedArguments = const {}}) {
+  static createInstance(Type type, {
+    Symbol constructor = const Symbol(""),
+    List arguments = const [],
+    Map<Symbol, dynamic> namedArguments = const {}
+  }) {
     var typeMirror = reflectType(type);
     if (typeMirror is ClassMirror) {
       return typeMirror

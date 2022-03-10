@@ -5,10 +5,10 @@ class Scope {
   const Scope(this.label, this.preamble);
 
   @override
-  bool operator ==(Object other) =>
-      other is Scope &&
-      other.runtimeType == runtimeType &&
-      other.label == label;
+  bool operator ==(Object other) => true
+      && other is Scope
+      && other.runtimeType == runtimeType
+      && other.label == label;
 
   const Scope.root() : this('root', '>');
   const Scope.dhcp() : this('dhcp', '(dhcp-config)#');
