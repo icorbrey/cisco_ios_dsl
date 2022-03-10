@@ -1,3 +1,4 @@
+import 'package:cisco_ios_dsl/src/priviledged/priviledged_scope.dart';
 import 'package:cisco_ios_dsl/src/util/activator.dart';
 import 'package:cisco_ios_dsl/src/util/scope_stack.dart';
 
@@ -26,4 +27,7 @@ class Device {
     run('exit');
     scope.pop();
   }
+
+  void enable(void Function(PriviledgedScope x) body) =>
+    useScope(Scope.priviledged(), 'enable', body);
 }
