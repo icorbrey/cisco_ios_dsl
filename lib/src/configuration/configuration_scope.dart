@@ -3,6 +3,9 @@ import 'package:cisco_ios_dsl/src/configuration/configuration_ipv6.dart';
 import 'package:cisco_ios_dsl/src/configuration/configuration_sdm.dart';
 import 'package:cisco_ios_dsl/src/configuration/configuration_services.dart';
 import 'package:cisco_ios_dsl/src/device.dart';
+import 'package:cisco_ios_dsl/src/interface/interface_scope.dart';
+import 'package:cisco_ios_dsl/src/interface/subinterface_scope.dart';
+import 'package:cisco_ios_dsl/src/util/scope.dart';
 
 class ConfigurationScope {
 
@@ -17,6 +20,15 @@ class ConfigurationScope {
       sdm = ConfigurationSdm(device),
       ipv6 = ConfigurationIpv6(device),
       services = ConfigurationServices(device);
+
+  void interface(String interface, void Function(InterfaceScope x) body) => device
+    ..useScope(Scope.interface(), 'interface $interface', body);
+
+  void interfaces(String interfaces, void Function(InterfaceScope x) body) => device
+    ..useScope(Scope.interfaceRange(), 'interface range $interfaces', body);
+
+  void subinterface(String subinterface, void Function(SubinterfaceScope x) body) => device
+    ..useScope(Scope.subinterface(), 'interface $subinterface', body);
 
   void resetInterface(String interface) => device
     ..run('crypto key generate rsa');
