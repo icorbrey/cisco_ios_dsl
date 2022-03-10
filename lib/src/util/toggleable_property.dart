@@ -3,14 +3,14 @@ import 'package:cisco_ios_dsl/src/device.dart';
 class ToggleableProperty {
 
   final Device device;
-  final String enableCommand;
-  final String disableCommand;
+  final String _enableCommand;
+  final String _disableCommand;
 
-  ToggleableProperty(this.device, this.enableCommand, this.disableCommand);
+  ToggleableProperty(this.device, this._enableCommand, this._disableCommand);
 
   void enable() => device
-    ..run(enableCommand);
+    ..run(_enableCommand);
 
   void disable() => device
-    ..run(disableCommand);
+    ..run(_disableCommand);
 }
