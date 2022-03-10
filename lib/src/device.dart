@@ -7,7 +7,7 @@ class Device {
 
   final scope = ScopeStack();
   final bool _script;
-  final String id;
+  String id;
 
   Device(this.id) : _script = false;
   Device.script(this.id) : _script = true;
