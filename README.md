@@ -19,7 +19,7 @@ Add `cisco_ios_dsl` to your `pubspec.yaml`:
 
 ```yml
 dependencies:
-	cisco_ios_dsl: any
+  cisco_ios_dsl: any
 ```
 
 ## Usage
