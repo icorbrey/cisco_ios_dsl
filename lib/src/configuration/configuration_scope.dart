@@ -7,6 +7,7 @@ import 'package:cisco_ios_dsl/src/interface/interface_scope.dart';
 import 'package:cisco_ios_dsl/src/interface/subinterface_scope.dart';
 import 'package:cisco_ios_dsl/src/line/line_scope.dart';
 import 'package:cisco_ios_dsl/src/util/scope.dart';
+import 'package:cisco_ios_dsl/src/vlan/vlan_scope.dart';
 
 class ConfigurationScope {
 
@@ -36,6 +37,9 @@ class ConfigurationScope {
     
   void lines(String line, void Function(LineScope x) body) => device
     ..useScope(Scope.line(), 'line $line', body);
+
+  void vlan(int vlan, void Function(VlanScope x) body) => device
+    ..useScope(Scope.vlan(), 'vlan $vlan', body);
 
   void resetInterface(String interface) => device
     ..run('crypto key generate rsa');
