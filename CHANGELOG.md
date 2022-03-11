@@ -1,3 +1,10 @@
+## 1.1.0
+
+### Configuration Scope
+
+- Added the following commands:
+  - `spanningTree.enableRapidPVST`
+
 ## 1.0.1
 
 ### Bugfixes
