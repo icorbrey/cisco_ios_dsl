@@ -4,6 +4,7 @@
 
 - Added the following commands:
   - `spanningTree.enableRapidPVST`
+  - `spanningTree.setPriorityValue`
 
 ## 1.0.1
 
