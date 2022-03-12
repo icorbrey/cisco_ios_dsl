@@ -2,6 +2,7 @@ import 'package:cisco_ios_dsl/src/configuration/configuration_ip.dart';
 import 'package:cisco_ios_dsl/src/configuration/configuration_ipv6.dart';
 import 'package:cisco_ios_dsl/src/configuration/configuration_sdm.dart';
 import 'package:cisco_ios_dsl/src/configuration/configuration_services.dart';
+import 'package:cisco_ios_dsl/src/configuration/configuration_spanning_tree.dart';
 import 'package:cisco_ios_dsl/src/device.dart';
 import 'package:cisco_ios_dsl/src/interface/interface_scope.dart';
 import 'package:cisco_ios_dsl/src/interface/subinterface_scope.dart';
@@ -16,12 +17,14 @@ class ConfigurationScope {
   final ConfigurationSdm sdm;
   final ConfigurationIpv6 ipv6;
   final ConfigurationServices services;
+  final ConfigurationSpanningTree spanningTree;
 
   ConfigurationScope(this.device)
     : ip = ConfigurationIp(device),
       sdm = ConfigurationSdm(device),
       ipv6 = ConfigurationIpv6(device),
-      services = ConfigurationServices(device);
+      services = ConfigurationServices(device),
+      spanningTree = ConfigurationSpanningTree(device);
 
   void interface(String interface, void Function(InterfaceScope x) body) => device
     ..useScope(Scope.interface(), 'interface $interface', body);
