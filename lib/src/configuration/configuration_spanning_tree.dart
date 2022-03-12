@@ -1,10 +1,13 @@
+import 'package:cisco_ios_dsl/src/configuration/configuration_spanning_tree_portfast.dart';
 import 'package:cisco_ios_dsl/src/device.dart';
 
 class ConfigurationSpanningTree {
 
   final Device device;
+  final ConfigurationSpanningTreePortfast portfast;
 
-  ConfigurationSpanningTree(this.device);
+  ConfigurationSpanningTree(this.device)
+    : portfast = ConfigurationSpanningTreePortfast(device);
 
   void enableRapidPVST() => device
     ..run('spanning-tree mode rapid-pvst');

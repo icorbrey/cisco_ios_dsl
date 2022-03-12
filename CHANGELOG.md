@@ -4,6 +4,11 @@
 
 - Added the following commands:
   - `spanningTree.enableRapidPVST`
+  - `spanningTree.portfast.disable`
+  - `spanningTree.portfast.bpduGuard.disable`
+  - `spanningTree.portfast.bpduGuard.enable`
+  - `spanningTree.portfast.enable`
+  - `spanningTree.portfast.enableForTrunk`
   - `spanningTree.setPriorityValue`
 
 ## 1.0.1
