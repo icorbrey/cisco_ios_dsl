@@ -10,6 +10,7 @@
   - `spanningTree.portfast.enable`
   - `spanningTree.portfast.enableForTrunk`
   - `spanningTree.setPriorityValue`
+  - `spanningTree.setPriorityValueByOffset`
 
 ## 1.0.1
 

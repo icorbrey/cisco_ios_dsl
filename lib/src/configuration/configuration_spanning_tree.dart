@@ -19,4 +19,7 @@ class ConfigurationSpanningTree {
 
     device.run('spanning-tree vlan $vlan priority $priority');
   }
+
+  void setPriorityValueByOffset(int vlan, int offset) =>
+    setPriorityValue(vlan, 32768 + (4096 * offset));
 }
