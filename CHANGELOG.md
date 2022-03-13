@@ -1,3 +1,10 @@
+## 1.1.1
+
+### Interface Scope
+
+- Fixed that `switchport.access.setVlans` could take multiple VLANS
+- Renamed `switchport.access.setVlans` to `switchport.access.setVlan`
+
 ## 1.1.0
 
 ### Configuration Scope
