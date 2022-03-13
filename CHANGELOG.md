@@ -5,7 +5,6 @@
 - Added default route configuration commands:
   - Configuration -> `ip.setDefaultRoute`
   - Configuration -> `ipv6.setDefaultRoute`
-- Removed Configuration -> `ip.dhcp.createPool`
 - Added IPv6 DHCP pool configuration commands:
   - Configuration -> `ipv6.dhcp.pool` (to Ipv6 Pool Scope)
   - Interface -> `ipv6.enable`
@@ -17,6 +16,10 @@
   - IPv6 Pool -> `setDomainName`
   - IPv6 Pool -> `setDnsServer`
 - Added Interface -> `ipv6.enableSlaac`
+
+### Removals
+
+- Removed Configuration -> `ip.dhcp.createPool`
 
 ## 1.1.3
 
