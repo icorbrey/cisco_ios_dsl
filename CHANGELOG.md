@@ -1,3 +1,9 @@
+## 1.1.3
+
+### Bugfixes
+
+- Fixed invalid BPDU guard commands
+
 ## 1.1.2
 
 ### Interface Scope
