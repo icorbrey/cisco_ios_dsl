@@ -1,3 +1,9 @@
+## 1.2.2
+
+### Bugfixes
+
+- Fixed Configuration -> `ipv6.setDefaultRoute` using the wrong protocol
+
 ## 1.2.1
 
 ### Bugfixes

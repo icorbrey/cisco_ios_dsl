@@ -14,5 +14,5 @@ class ConfigurationIpv6 {
       routing = ToggleableProperty(device, 'ipv6 unicast-routing', 'no ipv6 unicast-routing');
 
   void setDefaultRoute(IPv6 route, String interface) => device
-    ..run('ip route ${route.ip}/${route.cidr} $interface');
+    ..run('ipv6 route ${route.ip}/${route.cidr} $interface');
 }
