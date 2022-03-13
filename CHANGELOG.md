@@ -1,3 +1,9 @@
+## 1.2.3
+
+### Bugfixes
+
+- Fixed off-by-one error in CIDR parser
+
 ## 1.2.2
 
 ### Bugfixes
