@@ -1,6 +1,6 @@
 name: cisco_ios_dsl
 description: A DSL for constructing Cisco IOS device configurations.
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/icorbrey/cisco_ios_dsl
 
 dependencies:
