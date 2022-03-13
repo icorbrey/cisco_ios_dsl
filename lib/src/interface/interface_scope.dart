@@ -21,6 +21,7 @@ class InterfaceScope {
       ipv6 = InterfaceIpV6(device),
       switchport = InterfaceSwitchport(device),
       etherChannel = InterfaceEtherChannel(device),
+      spanningTree = InterfaceSpanningTree(device),
       operation = ToggleableProperty(device, 'no shutdown', 'shutdown');
 
   void setDescription(String description) => device
