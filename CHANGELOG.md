@@ -1,3 +1,10 @@
+## 1.2.1
+
+### Bugfixes
+
+- Fixed Configuration -> `ipv6.dhcp.pool` using the IPv4 DHCP pool scope
+  instead of the IPv6 DHCP pool scope
+
 ## 1.2.0
 
 ### Additions
