@@ -1,9 +1,31 @@
 ## 1.1.1
 
+### Configuration Scope
+
+- Modified the following commands to operate globally:
+  - `spanningTree.portfast.disable`
+  - `spanningTree.portfast.bpduGuard.disable`
+  - `spanningTree.portfast.bpduGuard.enable`
+  - `spanningTree.portfast.enable`
+  - `spanningTree.portfast.enableForTrunk`
+- Renamed the following commands:
+  - `spanningTree.portfast.disable` -> `spanningTree.portfast.disableGlobally`
+  - `spanningTree.portfast.bpduGuard.disable` -> `spanningTree.portfast.bpduGuard.disableGlobally`
+  - `spanningTree.portfast.bpduGuard.enable` -> `spanningTree.portfast.bpduGuard.enableGlobally`
+  - `spanningTree.portfast.enable` -> `spanningTree.portfast.enableGlobally`
+  - `spanningTree.portfast.enableForTrunk` -> `spanningTree.portfast.enableForTrunkGlobally`
+
 ### Interface Scope
 
 - Fixed that `switchport.access.setVlans` could take multiple VLANS
-- Renamed `switchport.access.setVlans` to `switchport.access.setVlan`
+- Renamed the following commands:
+  - `switchport.access.setVlans` -> `switchport.access.setVlan`
+- Added the following commands:
+  - `spanningTree.portfast.disable`
+  - `spanningTree.portfast.bpduGuard.disable`
+  - `spanningTree.portfast.bpduGuard.enable`
+  - `spanningTree.portfast.enable`
+  - `spanningTree.portfast.enableForTrunk`
 
 ## 1.1.0
 

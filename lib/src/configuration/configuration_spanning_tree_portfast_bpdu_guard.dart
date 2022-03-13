@@ -6,9 +6,9 @@ class ConfigurationSpanningTreePortfastBpduGuard {
 
   ConfigurationSpanningTreePortfastBpduGuard(this.device);
 
-  void enable(String port) => device
-    ..run('set spantree portfast bpdu-guard $port enable');
+  void enableGlobally() => device
+    ..run('spanning-tree portfast edge bpduguard default');
 
-  void disable(String port) => device
-    ..run('set spantree portfast bpdu-guard $port disable');
+  void disableGlobally() => device
+    ..run('no spanning-tree portfast edge bpduguard default');
 }
