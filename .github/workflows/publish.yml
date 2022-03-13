@@ -13,8 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         
-      - name: Publish to pub.dev
-        uses: icorbrey/publish-dart-package@v1
-        with:
-          credentials: ${{ secrets.CREDENTIAL_JSON }}
-          publish_method: standard
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+        
+      - name: Copy credentials
+        run: echo ${{ secrets.CREDENTIAL_JSON }} >> ~/.config/dart/pub-credentials.json
+        
+      - name: Install dependencies
+        run: dart pub get
+      
+      - name: Publish package to pub.dev
+        run: dart pub publish --force
