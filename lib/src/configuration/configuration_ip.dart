@@ -22,4 +22,7 @@ class ConfigurationIp {
 
   void setDefaultGateway(IPv4 ipv4) => device
     ..run('ip default-gateway ${ipv4.ip}');
+
+  void setDefaultRoute(IPv4 route, String interface) => device
+    ..run('ip route ${route.ip} ${route.mask} $interface');
 }

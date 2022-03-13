@@ -10,9 +10,9 @@ class InterfaceIp {
   InterfaceIp(this.device)
     : dhcp = ToggleableProperty(device, 'ip address dhcp', 'no ip address dhcp');
 
-  setGateway(IPv4 gateway) => device
+  void setGateway(IPv4 gateway) => device
     ..run('ip address ${gateway.ip} ${gateway.mask}');
 
-  setHelperAddress(IPv4 helper) => device
+  void setHelperAddress(IPv4 helper) => device
     ..run('ip helper-address ${helper.ip}');
 }
