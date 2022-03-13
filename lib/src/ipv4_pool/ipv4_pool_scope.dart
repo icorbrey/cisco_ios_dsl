@@ -1,11 +1,11 @@
 import 'package:cisco_ios_dsl/src/device.dart';
 import 'package:cisco_ios_dsl/src/util/ipv4.dart';
 
-class PoolScope {
+class IPv4PoolScope {
 
   final Device device;
 
-  PoolScope(this.device);
+  IPv4PoolScope(this.device);
 
   void setNetworkAddress(IPv4 address) => device
     ..run('network ${address.ip} ${address.mask}');
