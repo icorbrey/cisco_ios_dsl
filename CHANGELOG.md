@@ -1,3 +1,9 @@
+## 1.1.2
+
+### Interface Scope
+
+- Fixed issue where `spanningTree` subcommands were inaccessible
+
 ## 1.1.1
 
 ### Configuration Scope
