@@ -1,3 +1,11 @@
+## 1.2.0
+
+### Additions
+
+- Added default route configuration commands:
+  - Configuration -> `ip.setDefaultRoute`
+  - Configuration -> `ipv6.setDefaultRoute`
+
 ## 1.1.3
 
 ### Bugfixes
