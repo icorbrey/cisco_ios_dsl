@@ -11,11 +11,12 @@ class Scope {
       && other.label == label;
 
   const Scope.root() : this('root', '>');
-  const Scope.dhcp() : this('dhcp', '(dhcp-config)#');
+  const Scope.dhcp() : this('dhcp', '(config-dhcp)#');
   const Scope.line() : this('line', '(config-line)#');
   const Scope.vlan() : this('vlan', '(config-vlan)#');
   const Scope.priviledged() : this('priviledged', '#');
   const Scope.configure() : this('configure', '(config)#');
+  const Scope.dhcpv6() : this('dhcpv6', '(config-dhcpv6)#');
   const Scope.interface() : this('interface', '(config-if)#');
   const Scope.subinterface() : this('subinterface', '(config-subif)#');
   const Scope.interfaceRange() : this('interface-range', '(config-if-range)#');

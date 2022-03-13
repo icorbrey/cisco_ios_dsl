@@ -10,7 +10,7 @@ class InterfaceScope {
 
   final Device device;
   final InterfaceIp ip;
-  final InterfaceIpV6 ipv6;
+  final InterfaceIpv6 ipv6;
   final ToggleableProperty operation;
   final InterfaceSwitchport switchport;
   final InterfaceEtherChannel etherChannel;
@@ -18,7 +18,7 @@ class InterfaceScope {
 
   InterfaceScope(this.device)
     : ip = InterfaceIp(device),
-      ipv6 = InterfaceIpV6(device),
+      ipv6 = InterfaceIpv6(device),
       switchport = InterfaceSwitchport(device),
       etherChannel = InterfaceEtherChannel(device),
       spanningTree = InterfaceSpanningTree(device),
