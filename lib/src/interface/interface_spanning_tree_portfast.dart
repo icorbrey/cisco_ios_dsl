@@ -7,8 +7,8 @@ class InterfaceSpanningTreePortfast extends ToggleableProperty{
 
   InterfaceSpanningTreePortfast(Device device)
     : bpduGuard = ToggleableProperty(device,
-        'spanning-tree bpdu-guard enable',
-        'spanning-tree bpdu-guard disable'
+        'spanning-tree bpduguard enable',
+        'spanning-tree bpduguard disable'
       ),
       super(device, 'spanning-tree portfast', 'spanning-tree portfast disable');
 
