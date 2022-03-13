@@ -16,6 +16,7 @@
   - IPv6 Pool -> `setAddressPrefix`
   - IPv6 Pool -> `setDomainName`
   - IPv6 Pool -> `setDnsServer`
+- Added Interface -> `ipv6.enableSlaac`
 
 ## 1.1.3
 
