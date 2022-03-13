@@ -21,6 +21,11 @@ class InterfaceIpv6 {
   void enableDhcpProvider() => device
     ..run('ipv6 nd managed-config-flag');
 
+  void enableSlaac() => device
+    ..run('no ipv6 nd managed-config-flag')
+    ..run('no ipv6 nd other-config-flag')
+    ..run('ipv6 nd prefix default');
+
   void forceStatefulDhcp(IPv6 prefix) => device
     ..run('ipv6 nd prefix ${prefix.ip}/${prefix.cidr} 14400 14400 no-autoconfig');
 
