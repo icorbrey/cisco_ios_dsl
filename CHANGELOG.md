@@ -1,3 +1,13 @@
+## 1.3.0
+
+### Additions
+
+- Added the following commands:
+  - Interface -> `portSecurity.enable`
+  - Interface -> `portSecurity.setMaxDevices`
+  - Interface -> `portSecurity.rememberMacAddresses`
+  - Interface -> `portSecurity.logViolations`
+
 ## 1.2.3
 
 ### Bugfixes
