@@ -20,6 +20,9 @@ class Device {
   void run(String command) =>
     print(_getPrompt() + command);
 
+  void comment(String message) =>
+    print("\x1B[32m! $message\x1B[0m");
+
   void useScope<T>(Scope newScope, String command, void Function(T x) body) {
     run(command);
     scope.push(newScope);
