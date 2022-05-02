@@ -1,3 +1,4 @@
+/// Converts the given CIDR value to a network mask.
 String cidrToMask(int cidr) => [
   '0.0.0.0',
   '128.0.0.0',

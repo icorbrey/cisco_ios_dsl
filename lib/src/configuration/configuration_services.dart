@@ -1,11 +1,15 @@
+import 'package:cisco_ios_dsl/src/configuration/configuration_services_password_encryption.dart';
 import 'package:cisco_ios_dsl/src/device.dart';
-import 'package:cisco_ios_dsl/src/util/toggleable_property.dart';
 
+/// Services container for the Configuration scope.
 class ConfigurationServices {
 
+  /// The device being configured.
   final Device device;
-  final ToggleableProperty passwordEncryption;
+
+  /// The password encryption service configurator.
+  final ConfigurationServicesPasswordEncryption passwordEncryption;
 
   ConfigurationServices(this.device)
-    : passwordEncryption = ToggleableProperty(device, 'service password-encryption', 'no service password-encryption');
+    : passwordEncryption = ConfigurationServicesPasswordEncryption(device);
 }
