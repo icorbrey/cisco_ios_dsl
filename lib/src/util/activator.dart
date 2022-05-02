@@ -1,6 +1,9 @@
 import "dart:mirrors";
 
+/// A generic activation class.
 class Activator {
+  
+  /// Creates an instance of the [type].
   static createInstance(Type type, {
     Symbol constructor = const Symbol(""),
     List arguments = const [],
