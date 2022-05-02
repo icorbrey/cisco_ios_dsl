@@ -10,7 +10,7 @@ import 'package:cisco_ios_dsl/src/line/line_scope.dart';
 import 'package:cisco_ios_dsl/src/util/scope.dart';
 import 'package:cisco_ios_dsl/src/vlan/vlan_scope.dart';
 
-/// The configuration scope.
+/// The configuration scope configurator.
 class ConfigurationScope {
 
   /// The device being configured.
