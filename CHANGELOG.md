@@ -1,3 +1,9 @@
+## 1.4.0
+
+### Maintenance
+
+- Documented the entire codebase
+
 ## 1.3.0
 
 ### Additions
