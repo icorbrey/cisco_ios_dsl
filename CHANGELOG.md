@@ -5,8 +5,10 @@
 - Added the following commands:
   - Configuration -> `ipv4.routing.createStaticDefaultRoute`
   - Configuration -> `ipv4.routing.createFloatingStaticDefaultRoute`
+  - Configuration -> `ipv4.routing.removeStaticDefaultRoute`
   - Configuration -> `ipv6.routing.createStaticDefaultRoute`
   - Configuration -> `ipv6.routing.createFloatingStaticDefaultRoute`
+  - Configuration -> `ipv4.routing.removeStaticDefaultRoute`
   - Interface -> `hsrp.enable`
   - Interface -> `hsrp.setStandbyGatewayForGroup`
   - Interface -> `hsrp.setStandbyRouterPriority`

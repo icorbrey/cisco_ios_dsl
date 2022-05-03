@@ -31,6 +31,11 @@ class ConfigurationIpv4Routing {
     ..comment('  Administrative distance: $administrativeDistance')
     ..run('ip route ${packetMask.ip} ${packetMask.mask} ${destination.ip} $administrativeDistance');
 
+  /// Removes a static default route
+  void removeStaticDefaultRoute(IPv4 packetMask, IPv4 destination) => device
+    ..comment('Remove a static default IPv4 route')
+    ..run('ip route ${packetMask.ip} ${packetMask.mask} ${destination.ip}');
+
   /// Disables IPv4 routing.
   void disable() => device
     ..comment('Disable IPv4 routing')

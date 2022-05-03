@@ -31,6 +31,11 @@ class ConfigurationIpv6Routing {
     ..comment('  Administrative distance: $administrativeDistance')
     ..run('ip route ${packetMask.ip}/${packetMask.cidr} ${destination.ip} $administrativeDistance');
 
+  /// Removes a static default route
+  void removeStaticDefaultRoute(IPv6 packetMask, IPv6 destination) => device
+    ..comment('Remove a static default IPv6 route')
+    ..run('ip route ${packetMask.ip}/${packetMask.cidr} ${destination.ip}');
+
   /// Disables IPv6 routing.
   void disable() => device
     ..comment('Disable IPv6 routing')
