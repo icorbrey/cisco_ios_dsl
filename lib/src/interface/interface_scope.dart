@@ -1,5 +1,6 @@
 import 'package:cisco_ios_dsl/src/device.dart';
 import 'package:cisco_ios_dsl/src/interface/interface_ether_channel.dart';
+import 'package:cisco_ios_dsl/src/interface/interface_hsrp.dart';
 import 'package:cisco_ios_dsl/src/interface/interface_ipv4.dart';
 import 'package:cisco_ios_dsl/src/interface/interface_ipv6.dart';
 import 'package:cisco_ios_dsl/src/interface/interface_spanning_tree.dart';
@@ -17,6 +18,9 @@ class InterfaceScope {
   /// The IPv6 configurator.
   final InterfaceIpv6 ipv6;
 
+  /// The HSRP configurator.
+  final InterfaceHsrp hsrp;
+
   /// The switchport configurator.
   final InterfaceSwitchport switchport;
 
@@ -29,6 +33,7 @@ class InterfaceScope {
   InterfaceScope(this.device)
     : ipv4 = InterfaceIpv4(device),
       ipv6 = InterfaceIpv6(device),
+      hsrp = InterfaceHsrp(device),
       switchport = InterfaceSwitchport(device),
       etherChannel = InterfaceEtherChannel(device),
       spanningTree = InterfaceSpanningTree(device);

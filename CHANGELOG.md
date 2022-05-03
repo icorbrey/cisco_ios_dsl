@@ -1,5 +1,13 @@
 ## 1.4.0
 
+### Additions
+
+- Added the following commands:
+  - Interface -> `hsrp.enable`
+  - Interface -> `hsrp.setStandbyGatewayForGroup`
+  - Interface -> `hsrp.setStandbyRouterPriority`
+  - Interface -> `hsrp.allowPrimaryRouterToRetakeControl`
+
 ### Maintenance
 
 - Documented the entire codebase
