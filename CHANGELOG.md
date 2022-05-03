@@ -3,6 +3,10 @@
 ### Additions
 
 - Added the following commands:
+  - Configuration -> `ipv4.routing.createStaticDefaultRoute`
+  - Configuration -> `ipv4.routing.createFloatingStaticDefaultRoute`
+  - Configuration -> `ipv6.routing.createStaticDefaultRoute`
+  - Configuration -> `ipv6.routing.createFloatingStaticDefaultRoute`
   - Interface -> `hsrp.enable`
   - Interface -> `hsrp.setStandbyGatewayForGroup`
   - Interface -> `hsrp.setStandbyRouterPriority`
