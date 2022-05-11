@@ -17,7 +17,7 @@ class ConfigurationScope {
   final Device device;
 
   /// The IPv4 configurator.
-  final ConfigurationIpv4 ip;
+  final ConfigurationIpv4 ipv4;
 
   /// The SDM configurator.
   final ConfigurationSdm sdm;
@@ -32,8 +32,8 @@ class ConfigurationScope {
   final ConfigurationSpanningTree spanningTree;
 
   ConfigurationScope(this.device)
-    : ip = ConfigurationIpv4(device),
-      sdm = ConfigurationSdm(device),
+    : sdm = ConfigurationSdm(device),
+      ipv4 = ConfigurationIpv4(device),
       ipv6 = ConfigurationIpv6(device),
       services = ConfigurationServices(device),
       spanningTree = ConfigurationSpanningTree(device);
