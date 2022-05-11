@@ -13,16 +13,31 @@ class Device {
   /// Whether this device should emulate a terminal or be scriptable.
   final bool _isScript;
 
+  /// Whether this device should output comments.
+  final bool _areCommentsShown;
+
   /// This device's ID.
   String id;
 
   /// Creates a Cisco IOS device that emulates a terminal.
   Device(this.id)
-    : _isScript = false;
+    : _isScript = false,
+      _areCommentsShown = false;
+
+  /// Creates a Cisco IOS device that emulates a terminal with comments.
+  Device.comments(this.id)
+    : _isScript = false,
+      _areCommentsShown = true;
 
   /// Creates a Cisco IOS device that is scriptable.
   Device.script(this.id)
-    : _isScript = true;
+    : _isScript = true,
+      _areCommentsShown = false;
+
+  /// Creates a Cisco IOS device that is scriptable and shows comments.
+  Device.scriptWithComments(this.id)
+    : _isScript = true,
+      _areCommentsShown = true;
 
   /// Returns the prompt.
   String _getPrompt() => !_isScript 
@@ -34,8 +49,11 @@ class Device {
     print(_getPrompt() + command);
 
   /// Prints the given comment.
-  void comment(String message) =>
-    print("\x1B[32m! $message\x1B[0m");
+  void comment(String message) {
+    if (_areCommentsShown) {
+      print("\x1B[32m! $message\x1B[0m");
+    }
+  }
 
   /// Enters the given scope, runs the body, and exits.
   void useScope<T>(Scope newScope, String command, void Function(T x) body) {
