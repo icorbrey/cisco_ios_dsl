@@ -1,3 +1,7 @@
+## 1.4.1
+
+- Improved IPv4 routing options.
+
 ## 1.4.0
 
 ### Additions
