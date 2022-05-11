@@ -40,7 +40,8 @@ class InterfaceIpv6 {
     ..comment('Enable SLAAC on this interface.')
     ..run('no ipv6 nd managed-config-flag')
     ..run('no ipv6 nd other-config-flag')
-    ..run('ipv6 nd prefix default');
+    ..run('ipv6 nd prefix default')
+    ..run('ipv6 address auto');
 
   /// Forces stateful IPv6 DHCP on this interface with [prefix].
   void forceStatefulDhcp(IPv6 prefix) => device

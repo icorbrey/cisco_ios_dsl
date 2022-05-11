@@ -1,3 +1,7 @@
+## 1.4.2
+
+- Hopefully fixed SLAAC configuration.
+
 ## 1.4.1
 
 - Improved IPv4 routing options.
